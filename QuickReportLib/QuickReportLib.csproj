@@ -1,0 +1,1801 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94C7F162-013E-44A2-8E41-B1E07465BAFD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuickReportLib</RootNamespace>
+    <AssemblyName>QuickReportLib</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>E:\3.02 代码实现\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPRControl, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.CalcEngine, Version=2.5.2011.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Excel, Version=2.5.2011.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.PluginCalendar.WinForms, Version=2.5.2007.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win, Version=2.5.2007.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win.Spread, Version=2.5.2007.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="HISFC.Object, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="NFC, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="NFC.Interface, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Fp\LineShapePlus.cs" />
+    <Compile Include="Class\Fp\NumberCellTypePlus.cs" />
+    <Compile Include="Class\Fp\TextCellTypePlus.cs" />
+    <Compile Include="Class\Window\GlobalValueToolStripItemProvider.cs" />
+    <Compile Include="Class\Window\ReportEngine.cs" />
+    <Compile Include="ConditionInputType\BaseInputType.cs" />
+    <Compile Include="ConditionInputType\CheckBox.cs" />
+    <Compile Include="ConditionInputType\ComboBox.cs" />
+    <Compile Include="ConditionInputType\DateTimePicker.cs" />
+    <Compile Include="ConditionInputType\RadioButton.cs" />
+    <Compile Include="ConditionInputType\TextBox.cs" />
+    <Compile Include="Constants\Constants.cs" />
+    <Compile Include="Controls\ConditionInputTypeSetting\BaseCheckControlSettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\BaseCheckControlSettingUserControl.Designer.cs">
+      <DependentUpon>BaseCheckControlSettingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\BaseSettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\BaseSettingUserControl.Designer.cs">
+      <DependentUpon>BaseSettingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\CheckBoxSettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\CheckBoxSettingUserControl.Designer.cs">
+      <DependentUpon>CheckBoxSettingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\ComboBoxSettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\ComboBoxSettingUserControl.Designer.cs">
+      <DependentUpon>ComboBoxSettingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\DateTimePickerSettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\DateTimePickerSettingUserControl.Designer.cs">
+      <DependentUpon>DateTimePickerSettingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\RadioButtonSettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\RadioButtonSettingUserControl.Designer.cs">
+      <DependentUpon>RadioButtonSettingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\TextBoxSettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ConditionInputTypeSetting\TextBoxSettingUserControl.Designer.cs">
+      <DependentUpon>TextBoxSettingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlWidthSetter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlWidthSetter.Designer.cs">
+      <DependentUpon>ControlWidthSetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\FilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\FilterForm.Designer.cs">
+      <DependentUpon>FilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FpSpreadForHeaderSetting.cs">
+    </Compile>
+    <Compile Include="Controls\FpSpreadForHeaderSetting.Designer.cs">
+      <DependentUpon>FpSpreadForHeaderSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GlobalValue\BaseComboBoxForGlobalValue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GlobalValue\BaseComboBoxForGlobalValue.Designer.cs">
+      <DependentUpon>BaseComboBoxForGlobalValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GlobalValue\ComboBoxForNormalGlobalValueAsker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GlobalValue\ComboBoxForNormalGlobalValueAsker.Designer.cs">
+      <DependentUpon>ComboBoxForNormalGlobalValueAsker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GlobalValue\TextBoxForMainReportSQL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GlobalValue\TextBoxForMainReportSQL.Designer.cs">
+      <DependentUpon>TextBoxForMainReportSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GlobalValue\TextBoxForNormalGlobalValueAsker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GlobalValue\TextBoxForNormalGlobalValueAsker.Designer.cs">
+      <DependentUpon>TextBoxForNormalGlobalValueAsker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ComboBoxActionAfterEnterKeyDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ComboBoxActionAfterEnterKeyDown.Designer.cs">
+      <DependentUpon>ComboBoxActionAfterEnterKeyDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ComboBoxDateTimeSystemValue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ComboBoxDateTimeSystemValue.Designer.cs">
+      <DependentUpon>ComboBoxDateTimeSystemValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ComboBoxValid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ComboBoxValid.Designer.cs">
+      <DependentUpon>ComboBoxValid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\BaseInfoSetting\ToolStripButtonLock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\BaseInfoSetting\ToolStripButtonLock.Designer.cs">
+      <DependentUpon>ToolStripButtonLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\BaseInfoSetting\ToolStripButtonUnLock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\BaseInfoSetting\ToolStripButtonUnLock.Designer.cs">
+      <DependentUpon>ToolStripButtonUnLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderBase.Designer.cs">
+      <DependentUpon>ToolStripButtonBorderBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderAll.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderAll.Designer.cs">
+      <DependentUpon>ToolStripButtonBorderAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderAround.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderAround.Designer.cs">
+      <DependentUpon>ToolStripButtonBorderAround.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderBottom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderBottom.Designer.cs">
+      <DependentUpon>ToolStripButtonBorderBottom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderLeft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderLeft.Designer.cs">
+      <DependentUpon>ToolStripButtonBorderLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderRight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderRight.Designer.cs">
+      <DependentUpon>ToolStripButtonBorderRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderTop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderTop.Designer.cs">
+      <DependentUpon>ToolStripButtonBorderTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderEraser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderEraser.Designer.cs">
+      <DependentUpon>ToolStripButtonBorderEraser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripButtonHAlignmentBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripButtonHAlignmentBase.Designer.cs">
+      <DependentUpon>ToolStripButtonHAlignmentBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonDeleteOne.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonDeleteOne.Designer.cs">
+      <DependentUpon>ToolStripButtonDeleteOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonDown.Designer.cs">
+      <DependentUpon>ToolStripButtonDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonExport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonExport.Designer.cs">
+      <DependentUpon>ToolStripButtonExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonImport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonImport.Designer.cs">
+      <DependentUpon>ToolStripButtonImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonNewOne.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonNewOne.Designer.cs">
+      <DependentUpon>ToolStripButtonNewOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonNull.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonNull.Designer.cs">
+      <DependentUpon>ToolStripButtonNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonUp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonUp.Designer.cs">
+      <DependentUpon>ToolStripButtonUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripButtonHAlignmentBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripButtonHAlignmentBase.Designer.cs">
+      <DependentUpon>ToolStripButtonHAlignmentBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripButtonHAlignmentCenter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripButtonHAlignmentCenter.Designer.cs">
+      <DependentUpon>ToolStripButtonHAlignmentCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripButtonHAlignmentLeft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripButtonHAlignmentLeft.Designer.cs">
+      <DependentUpon>ToolStripButtonHAlignmentLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripButtonHAlignmentRight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripButtonHAlignmentRight.Designer.cs">
+      <DependentUpon>ToolStripButtonHAlignmentRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripSeparatorOfHAlignment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripSeparatorOfHAlignment.Designer.cs">
+      <DependentUpon>ToolStripSeparatorOfHAlignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonColor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonColor.Designer.cs">
+      <DependentUpon>ToolStripButtonColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonColumnTotalSum.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonColumnTotalSum.Designer.cs">
+      <DependentUpon>ToolStripButtonColumnTotalSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonFilter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonFilter.Designer.cs">
+      <DependentUpon>ToolStripButtonFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonFont.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonFont.Designer.cs">
+      <DependentUpon>ToolStripButtonFont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonMerge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonMerge.Designer.cs">
+      <DependentUpon>ToolStripButtonMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonRowTotalSum.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonRowTotalSum.Designer.cs">
+      <DependentUpon>ToolStripButtonRowTotalSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonSort.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonSort.Designer.cs">
+      <DependentUpon>ToolStripButtonSort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripSeparatorOfNumberColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripSeparatorOfNumberColumn.Designer.cs">
+      <DependentUpon>ToolStripSeparatorOfNumberColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripSplitButtonDecimalPlace.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripSplitButtonDecimalPlace.Designer.cs">
+      <DependentUpon>ToolStripSplitButtonDecimalPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripSplitButtonValueTranslateType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripSplitButtonValueTranslateType.Designer.cs">
+      <DependentUpon>ToolStripSplitButtonValueTranslateType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonBevelLineUp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonBevelLineUp.Designer.cs">
+      <DependentUpon>ToolStripButtonBevelLineUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonColor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonColor.Designer.cs">
+      <DependentUpon>ToolStripButtonColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonFont.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonFont.Designer.cs">
+      <DependentUpon>ToolStripButtonFont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonBevelLineDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonBevelLineDown.Designer.cs">
+      <DependentUpon>ToolStripButtonBevelLineDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripButtonHAlignmentCenter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripButtonHAlignmentCenter.Designer.cs">
+      <DependentUpon>ToolStripButtonHAlignmentCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripButtonHAlignmentLeft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripButtonHAlignmentLeft.Designer.cs">
+      <DependentUpon>ToolStripButtonHAlignmentLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripButtonHAlignmentRight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripButtonHAlignmentRight.Designer.cs">
+      <DependentUpon>ToolStripButtonHAlignmentRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonSpan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonSpan.Designer.cs">
+      <DependentUpon>ToolStripButtonSpan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableColumnWidth.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableColumnWidth.Designer.cs">
+      <DependentUpon>ToolStripLableColumnWidth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableRowHeight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableRowHeight.Designer.cs">
+      <DependentUpon>ToolStripLableRowHeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxColumnWidth.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxColumnWidth.Designer.cs">
+      <DependentUpon>ToolStripTextBoxColumnWidth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxRowHeight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxRowHeight.Designer.cs">
+      <DependentUpon>ToolStripTextBoxRowHeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripButtonVAlignmentBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripButtonVAlignmentBase.Designer.cs">
+      <DependentUpon>ToolStripButtonVAlignmentBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripButtonVAlignmentCenter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripButtonVAlignmentCenter.Designer.cs">
+      <DependentUpon>ToolStripButtonVAlignmentCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripButtonVAlignmentBottom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripButtonVAlignmentBottom.Designer.cs">
+      <DependentUpon>ToolStripButtonVAlignmentBottom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripButtonVAlignmentTop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripButtonVAlignmentTop.Designer.cs">
+      <DependentUpon>ToolStripButtonVAlignmentTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableBottomRowCount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableBottomRowCount.Designer.cs">
+      <DependentUpon>ToolStripLableBottomRowCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableColumnCount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableColumnCount.Designer.cs">
+      <DependentUpon>ToolStripLableColumnCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableSpace.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableSpace.Designer.cs">
+      <DependentUpon>ToolStripLableSpace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableTopRowCount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableTopRowCount.Designer.cs">
+      <DependentUpon>ToolStripLableTopRowCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripSeparatorOfHAlignment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripSeparatorOfHAlignment.Designer.cs">
+      <DependentUpon>ToolStripSeparatorOfHAlignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripSeparatorOfBorder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripSeparatorOfBorder.Designer.cs">
+      <DependentUpon>ToolStripSeparatorOfBorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripSeparatorOfSpan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripSeparatorOfSpan.Designer.cs">
+      <DependentUpon>ToolStripSeparatorOfSpan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripSeparatorOfVAlignment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripSeparatorOfVAlignment.Designer.cs">
+      <DependentUpon>ToolStripSeparatorOfVAlignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxBottomRowCount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxBottomRowCount.Designer.cs">
+      <DependentUpon>ToolStripTextBoxBottomRowCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxColumnCount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxColumnCount.Designer.cs">
+      <DependentUpon>ToolStripTextBoxColumnCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxTopRowCount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxTopRowCount.Designer.cs">
+      <DependentUpon>ToolStripTextBoxTopRowCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripButtonVAlignmentBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripButtonVAlignmentBase.Designer.cs">
+      <DependentUpon>ToolStripButtonVAlignmentBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripButtonVAlignmentBottom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripButtonVAlignmentBottom.Designer.cs">
+      <DependentUpon>ToolStripButtonVAlignmentBottom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripButtonVAlignmentCenter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripButtonVAlignmentCenter.Designer.cs">
+      <DependentUpon>ToolStripButtonVAlignmentCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripButtonVAlignmentTop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripButtonVAlignmentTop.Designer.cs">
+      <DependentUpon>ToolStripButtonVAlignmentTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripSeparatorOfVAlignment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripSeparatorOfVAlignment.Designer.cs">
+      <DependentUpon>ToolStripSeparatorOfVAlignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripSeparatorOfSort.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripSeparatorOfSort.Designer.cs">
+      <DependentUpon>ToolStripSeparatorOfSort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ToolStripSplitButtonPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ToolStripSplitButtonPlus.Designer.cs">
+      <DependentUpon>ToolStripSplitButtonPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\UserControlOfReportTree\ToolStripButtonRefresh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\IToolStripMenuProvider\UserControlOfReportTree\ToolStripButtonRefresh.Designer.cs">
+      <DependentUpon>ToolStripButtonRefresh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ToolStripButtonPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ToolStripButtonPlus.Designer.cs">
+      <DependentUpon>ToolStripButtonPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\PanelWithColor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\PanelWithColor.Designer.cs">
+      <DependentUpon>PanelWithColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\PanelWithLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\PanelWithLine.Designer.cs">
+      <DependentUpon>PanelWithLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ToolStripNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ToolStripNumericUpDown.Designer.cs">
+      <DependentUpon>ToolStripNumericUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ToolStripTextBoxPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ToolStripTextBoxPlus.Designer.cs">
+      <DependentUpon>ToolStripTextBoxPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PublicInterfaceSetting\IDatasAskerSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PublicInterfaceSetting\IDatasAskerSetting.Designer.cs">
+      <DependentUpon>IDatasAskerSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PublicInterfaceSetting\ISystemValueSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PublicInterfaceSetting\ISystemValueSetting.Designer.cs">
+      <DependentUpon>ISystemValueSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\BaseReportSettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\BaseReportSettingUserControl.Designer.cs">
+      <DependentUpon>BaseReportSettingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ConditionDetailSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ConditionDetailSetting.Designer.cs">
+      <DependentUpon>ConditionDetailSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ConditionSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ConditionSetting.Designer.cs">
+      <DependentUpon>ConditionSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\DetailReportSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\DetailReportSetting.Designer.cs">
+      <DependentUpon>DetailReportSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\HeaderSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\HeaderSetting.Designer.cs">
+      <DependentUpon>HeaderSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\InterfaceSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\InterfaceSetting.Designer.cs">
+      <DependentUpon>InterfaceSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ReportSettingTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ReportSettingTabControl.Designer.cs">
+      <DependentUpon>ReportSettingTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ReportSettingTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ReportSettingTabPage.Designer.cs">
+      <DependentUpon>ReportSettingTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\TreeSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\TreeSetting.Designer.cs">
+      <DependentUpon>TreeSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SheetViewForHeaderSetting.cs">
+    </Compile>
+    <Compile Include="Controls\SheetViewForHeaderSetting.Designer.cs">
+      <DependentUpon>SheetViewForHeaderSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControlOfReportTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UserControlOfReportTree.Designer.cs">
+      <DependentUpon>UserControlOfReportTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Wizard\BaseWizardUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Wizard\BaseWizardUserControl.Designer.cs">
+      <DependentUpon>BaseWizardUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Wizard\ReportBaseInfoWizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Wizard\ReportBaseInfoWizard.Designer.cs">
+      <DependentUpon>ReportBaseInfoWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Wizard\ReportLayoutStyleWizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Wizard\ReportLayoutStyleWizard.Designer.cs">
+      <DependentUpon>ReportLayoutStyleWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\SelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\SelectorForm.Designer.cs">
+      <DependentUpon>SelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GlobalValue\BaseTextBoxForGlobalValue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GlobalValue\BaseTextBoxForGlobalValue.Designer.cs">
+      <DependentUpon>BaseTextBoxForGlobalValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GlobalValue\ToolStripSplitButtonForGlobalValue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GlobalValue\ToolStripSplitButtonForGlobalValue.Designer.cs">
+      <DependentUpon>ToolStripSplitButtonForGlobalValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ComboBoxPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ComboBoxPlus.Designer.cs">
+      <DependentUpon>ComboBoxPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ToolStripComboBoxPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ToolStripComboBoxPlus.Designer.cs">
+      <DependentUpon>ToolStripComboBoxPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\ToolTipPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\ToolTipPlus.Designer.cs">
+      <DependentUpon>ToolTipPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\BaseInfoSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\BaseInfoSetting.Designer.cs">
+      <DependentUpon>BaseInfoSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ReportSettingPlatForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ReportSettingPlatForm.Designer.cs">
+      <DependentUpon>ReportSettingPlatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Wizard\ReportLayoutStyleWizardElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Wizard\ReportLayoutStyleWizardElement.Designer.cs">
+      <DependentUpon>ReportLayoutStyleWizardElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Wizard\ReportStyleWizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Wizard\ReportStyleWizard.Designer.cs">
+      <DependentUpon>ReportStyleWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Wizard\ReportStyleWizardElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Wizard\ReportStyleWizardElement.Designer.cs">
+      <DependentUpon>ReportStyleWizardElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ReportStyleSetting\CustomColumnCrossStyleSettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ReportStyleSetting\CustomColumnCrossStyleSettingUserControl.Designer.cs">
+      <DependentUpon>CustomColumnCrossStyleSettingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ReportStyleSetting\GeneralCrossStyleSettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ReportStyleSetting\GeneralCrossStyleSettingUserControl.Designer.cs">
+      <DependentUpon>GeneralCrossStyleSettingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ReportStyleSetting\GridStyleSettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportSetting\ReportStyleSetting\GridStyleSettingUserControl.Designer.cs">
+      <DependentUpon>GridStyleSettingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportTabControl.Designer.cs">
+      <DependentUpon>ReportTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportTabPage.Designer.cs">
+      <DependentUpon>ReportTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportTree.Designer.cs">
+      <DependentUpon>ReportTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BaseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseUserControl.Designer.cs">
+      <DependentUpon>BaseUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FpSpreadForReport.cs">
+    </Compile>
+    <Compile Include="Controls\FpSpreadForReport.Designer.cs">
+      <DependentUpon>FpSpreadForReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\FpSpreadPlus.cs">
+    </Compile>
+    <Compile Include="Controls\Plus\FpSpreadPlus.Designer.cs">
+      <DependentUpon>FpSpreadPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\RichTextBoxPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\RichTextBoxPlus.Designer.cs">
+      <DependentUpon>RichTextBoxPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\TextBoxPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\TextBoxPlus.Designer.cs">
+      <DependentUpon>TextBoxPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Plus\TreeViewPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Plus\TreeViewPlus.Designer.cs">
+      <DependentUpon>TreeViewPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextBoxWithSelector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TextBoxWithSelector.Designer.cs">
+      <DependentUpon>TextBoxWithSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Wizard\WizardOfWizard\ReportStyle\CustomColumnCrossStyle\CustomColumnCrossStyleWizardUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Wizard\WizardOfWizard\ReportStyle\CustomColumnCrossStyle\CustomColumnCrossStyleWizardUserControl.Designer.cs">
+      <DependentUpon>CustomColumnCrossStyleWizardUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Wizard\WizardOfWizard\ReportStyle\CrossStyleWizardUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Wizard\WizardOfWizard\ReportStyle\CrossStyleWizardUserControl.Designer.cs">
+      <DependentUpon>CrossStyleWizardUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Wizard\WizardOfWizard\ReportStyle\GeneralCrossStyle\GeneralCrossStyleWizardUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Wizard\WizardOfWizard\ReportStyle\GeneralCrossStyle\GeneralCrossStyleWizardUserControl.Designer.cs">
+      <DependentUpon>GeneralCrossStyleWizardUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\ActionAfterEnterKeyDown.cs" />
+    <Compile Include="Enums\BevelLineType.cs" />
+    <Compile Include="Enums\CheckControlType.cs" />
+    <Compile Include="Enums\ComboBoxPlusColumnShowState.cs" />
+    <Compile Include="Enums\ControlWidthSetterControlTypes.cs" />
+    <Compile Include="Enums\HeaderSettingBorderType.cs" />
+    <Compile Include="Enums\HeaderSettingCommandStatus.cs" />
+    <Compile Include="Enums\HeaderSettingFpSpreadChangedType.cs" />
+    <Compile Include="Enums\IDatasAskerDoneAction.cs" />
+    <Compile Include="Enums\InterfaceSettingToolStripButtonType.cs" />
+    <Compile Include="Enums\ReportElement.cs" />
+    <Compile Include="Enums\ReportStyleAskForTranslationType.cs" />
+    <Compile Include="Enums\SQLCodeType.cs" />
+    <Compile Include="Enums\SystemValueType.cs" />
+    <Compile Include="Enums\TextBoxWithSelectorActionType.cs" />
+    <Compile Include="Enums\TypeOfType.cs" />
+    <Compile Include="Enums\ValueTranslateType.cs" />
+    <Compile Include="Enums\GlobalValueType.cs" />
+    <Compile Include="Enums\WizardOfWizardDoneAction.cs" />
+    <Compile Include="Forms\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormWithArrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormWithArrow.Designer.cs">
+      <DependentUpon>FormWithArrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuickReportEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuickReportEditor.Designer.cs">
+      <DependentUpon>QuickReportEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportSetting\ConditionCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportSetting\ConditionCreator.Designer.cs">
+      <DependentUpon>ConditionCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportSetting\ReportColumnPropertyEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportSetting\ReportColumnPropertyEditor.Designer.cs">
+      <DependentUpon>ReportColumnPropertyEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportSetting\TreeNodeIconSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportSetting\TreeNodeIconSelector.Designer.cs">
+      <DependentUpon>TreeNodeIconSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Wizard\BaseWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Wizard\BaseWizard.Designer.cs">
+      <DependentUpon>BaseWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Wizard\CreateReportWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Wizard\CreateReportWizard.Designer.cs">
+      <DependentUpon>CreateReportWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Wizard\ReportStyle\CustomColumnCrossStyleWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Wizard\ReportStyle\CustomColumnCrossStyleWizard.Designer.cs">
+      <DependentUpon>CustomColumnCrossStyleWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Wizard\ReportStyle\GeneralCrossStyleWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Wizard\ReportStyle\GeneralCrossStyleWizard.Designer.cs">
+      <DependentUpon>GeneralCrossStyleWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ConditionInputType\IConditionInputType.cs" />
+    <Compile Include="Interfaces\GlobalValue\IGlobalValueAsker.cs" />
+    <Compile Include="Interfaces\ReportSetting\ILoadedListener.cs" />
+    <Compile Include="Interfaces\ICheckInput.cs" />
+    <Compile Include="Interfaces\PublicInterface\IPublicInterface.cs" />
+    <Compile Include="Interfaces\ConditionInputType\IConditionInputTypeSettingObject.cs" />
+    <Compile Include="Interfaces\ConditionInputType\IConditionInputTypeSettingUserControl.cs" />
+    <Compile Include="Interfaces\ReportLayoutStyle\IReportLayoutStyle.cs" />
+    <Compile Include="Interfaces\ReportLayoutStyle\IReportLayoutStyleShowUserControl.cs" />
+    <Compile Include="Interfaces\ReportSetting\HeaderSetting\IBorderSettingToolStripItem.cs" />
+    <Compile Include="Interfaces\ReportSetting\HeaderSetting\IHorizontalAlignmentToolStripItem.cs" />
+    <Compile Include="Interfaces\ReportSetting\HeaderSetting\IReportColumnSettingToolStripItem.cs" />
+    <Compile Include="Interfaces\ReportSetting\HeaderSetting\IVerticalAlignmentToolStripItem.cs" />
+    <Compile Include="Interfaces\ReportSetting\IBaseInfoSettingUserControl.cs" />
+    <Compile Include="Interfaces\ReportSetting\IBringToFront.cs" />
+    <Compile Include="Interfaces\ReportSetting\IChangedUserControl.cs" />
+    <Compile Include="Interfaces\ReportSetting\IConditionSettingUserControl.cs" />
+    <Compile Include="Interfaces\ReportSetting\IDetailReportSettingUserControl.cs" />
+    <Compile Include="Interfaces\ReportSetting\HeaderSetting\IHeaderSettingToolStripItem.cs" />
+    <Compile Include="Interfaces\ReportSetting\IInterfaceSettingUserControl.cs" />
+    <Compile Include="Interfaces\ReportSetting\IReportSettingUserControl.cs" />
+    <Compile Include="Interfaces\PublicInterface\IPublicInterfaceSettingUserControl.cs" />
+    <Compile Include="Interfaces\ReportSetting\ITreeSettingUserControl.cs" />
+    <Compile Include="Interfaces\Wizard\ICreateReportWizardUserControl.cs" />
+    <Compile Include="Interfaces\Wizard\IWizardUserControl.cs" />
+    <Compile Include="Interfaces\Wizard\IWizardContainsWizardUserControl.cs" />
+    <Compile Include="Interfaces\ReportStyle\IReportStyle.cs" />
+    <Compile Include="Interfaces\ReportStyle\IReportStyleSettingObject.cs" />
+    <Compile Include="Interfaces\ReportStyle\IReportStyleSettingUserControl.cs" />
+    <Compile Include="Interfaces\ReportUserControl\ISendQueryCommandUserControl.cs" />
+    <Compile Include="Interfaces\ReportUserControl\ISendTranslateValueCommandUserControl.cs" />
+    <Compile Include="Interfaces\Wizard\WizardOfWizard\ReportStyle\ICustomColumnCrossStyleWizardUserControl.cs" />
+    <Compile Include="Interfaces\Wizard\WizardOfWizard\ReportStyle\IGeneralCrossStyleWizardUserControl.cs" />
+    <Compile Include="Interfaces\GlobalValue\IGlobalValue.cs" />
+    <Compile Include="Interfaces\GlobalValue\IGlobalValueToolStripItemAsker.cs" />
+    <Compile Include="Interfaces\GlobalValue\IGlobalValueProvider.cs" />
+    <Compile Include="Interfaces\GlobalValue\IGlobalValueToolStripItem.cs" />
+    <Compile Include="Interfaces\IShowStatusStripHelp.cs" />
+    <Compile Include="Interfaces\IToolStripMenuProvider.cs" />
+    <Compile Include="Managers\DataBaseManager.cs" />
+    <Compile Include="Managers\EncryptionManager.cs" />
+    <Compile Include="Managers\GuidManager.cs" />
+    <Compile Include="Managers\HookManager.cs" />
+    <Compile Include="Managers\ListManager.cs" />
+    <Compile Include="Managers\ReflectionManager.cs" />
+    <Compile Include="Managers\SQLManager.cs" />
+    <Compile Include="Managers\SystemValueManager.cs" />
+    <Compile Include="Managers\WindowManager.cs" />
+    <Compile Include="Managers\XmlManager.cs" />
+    <Compile Include="Objects\BaseObject.cs" />
+    <Compile Include="Objects\Column.cs" />
+    <Compile Include="Objects\Condition.cs" />
+    <Compile Include="Objects\ConditionInputTypeSetting\BaseCheckControlInputTypeSetting.cs" />
+    <Compile Include="Objects\ConditionInputTypeSetting\BaseInputTypeSetting.cs" />
+    <Compile Include="Objects\ConditionInputTypeSetting\CheckBoxSetting.cs" />
+    <Compile Include="Objects\ConditionInputTypeSetting\CheckControlElement.cs" />
+    <Compile Include="Objects\ConditionInputTypeSetting\ComboBoxSetting.cs" />
+    <Compile Include="Objects\ConditionInputTypeSetting\DateTimeSetting.cs" />
+    <Compile Include="Objects\ConditionInputTypeSetting\RadioButtonSetting.cs" />
+    <Compile Include="Objects\ConditionInputTypeSetting\TextBoxSetting.cs" />
+    <Compile Include="Objects\CustomSetting\ColumnWidthSetting.cs" />
+    <Compile Include="Objects\CustomSetting\LayoutSetting.cs" />
+    <Compile Include="Objects\CustomSetting\PrintSetting.cs" />
+    <Compile Include="Objects\GlobalValue\BaseGlobalValue.cs" />
+    <Compile Include="Objects\GlobalValue\ColumnGlobalValue.cs" />
+    <Compile Include="Objects\GlobalValue\ConditionGlobalValue.cs" />
+    <Compile Include="Objects\GlobalValue\DateGlobalValue.cs" />
+    <Compile Include="Objects\GlobalValue\DateTimeGlobalValue.cs" />
+    <Compile Include="Objects\GlobalValue\DepartmentGlobalValue.cs" />
+    <Compile Include="Objects\GlobalValue\DonamicGlobalValue.cs" />
+    <Compile Include="Objects\GlobalValue\PersonGlobalValue.cs" />
+    <Compile Include="Objects\GlobalValue\ReportGlobalValue.cs" />
+    <Compile Include="Objects\GlobalValue\ReportTypeGlobalValue.cs" />
+    <Compile Include="Objects\GlobalValue\TreeGlobalValue.cs" />
+    <Compile Include="Objects\ReportSetting\BevelLine.cs" />
+    <Compile Include="Objects\ReportSetting\CellBorder.cs" />
+    <Compile Include="Objects\ReportSetting\CellInfo.cs" />
+    <Compile Include="Objects\ReportSetting\ColumnWidth.cs" />
+    <Compile Include="Objects\ReportSetting\IDatasAskerImplementor.cs" />
+    <Compile Include="Objects\ReportSetting\ISystemValueImplementor.cs" />
+    <Compile Include="Objects\Report.cs" />
+    <Compile Include="Objects\ReportSetting\DetailReportConditionCompare.cs" />
+    <Compile Include="Objects\ReportSetting\DetailReportSetting.cs" />
+    <Compile Include="Objects\ReportSetting\InterfaceSetting.cs" />
+    <Compile Include="Objects\ReportSetting\HeaderBottomSetting.cs" />
+    <Compile Include="Objects\ReportSetting\HeaderSetting.cs" />
+    <Compile Include="Objects\ReportSetting\HeaderTopSetting.cs" />
+    <Compile Include="Objects\ReportSetting\MainReportSetting.cs" />
+    <Compile Include="Objects\ReportSetting\RowHeight.cs" />
+    <Compile Include="Objects\ReportSetting\TreeSetting.cs" />
+    <Compile Include="Objects\ReportSetting\ViewSetting.cs" />
+    <Compile Include="Objects\ReportStyleSetting\BaseStyleSetting.cs" />
+    <Compile Include="Objects\ReportStyleSetting\CustomColumnCrossStyleSetting.cs" />
+    <Compile Include="Objects\ReportStyleSetting\GeneralCrossStyleSetting.cs" />
+    <Compile Include="Objects\ReportStyleSetting\GridStyleSetting.cs" />
+    <Compile Include="Objects\SystemValue\BaseSystemValueObject.cs" />
+    <Compile Include="Objects\SystemValue\DeptID.cs" />
+    <Compile Include="Objects\SystemValue\DeptName.cs" />
+    <Compile Include="Objects\SystemValue\HospitalName.cs" />
+    <Compile Include="Objects\SystemValue\OperID.cs" />
+    <Compile Include="Objects\SystemValue\OperName.cs" />
+    <Compile Include="Objects\SystemValue\PCDate.cs" />
+    <Compile Include="Objects\SystemValue\PCDateTime.cs" />
+    <Compile Include="Objects\SystemValue\PCTime.cs" />
+    <Compile Include="Objects\SystemValue\ServerDate.cs" />
+    <Compile Include="Objects\SystemValue\ServerDateTime.cs" />
+    <Compile Include="Objects\SystemValue\ServerTime.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicInterfaces\IDatasAsker.cs" />
+    <Compile Include="PublicInterfaces\ISystemValue.cs" />
+    <Compile Include="QuickReportEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuickReportEdit.Designer.cs">
+      <DependentUpon>QuickReportEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuickReportShow.cs">
+    </Compile>
+    <Compile Include="QuickReportShow.Designer.cs">
+      <DependentUpon>QuickReportShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportLayoutStyles\BaseReportLayoutStyle.cs" />
+    <Compile Include="ReportLayoutStyles\Main.cs" />
+    <Compile Include="ReportLayoutStyles\ConditionTop_MainBottom.cs" />
+    <Compile Include="ReportLayoutStyles\ConditionTop_TreeBottomLeft_MainBottomRightTop_DetailBottomRightBottom.cs" />
+    <Compile Include="ReportLayoutStyles\ConditionTop_TreeBottomLeft_MainBottomRight.cs" />
+    <Compile Include="ReportLayoutStyles\MainTop_DetailBottom.cs" />
+    <Compile Include="ReportLayoutStyles\TreeLeft_ConditionRightTop_MainRightBottom.cs" />
+    <Compile Include="ReportLayoutStyles\TreeLeft_ConditionRightTop_MainRightBottomTop_DetailRightBottomBottom.cs" />
+    <Compile Include="ReportLayoutStyles\TreeLeft_MainRight.cs" />
+    <Compile Include="ReportLayoutStyles\TreeLeft_MainRightTop_DetailRightBottom.cs" />
+    <Compile Include="ReportStyles\BaseReportStyle.cs" />
+    <Compile Include="ReportStyles\GeneralCrossStyle.cs" />
+    <Compile Include="ReportStyles\CustomColumnCrossStyle.cs" />
+    <Compile Include="ReportStyles\GridStyle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\BaseUserControl.resx">
+      <DependentUpon>BaseUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ConditionInputTypeSetting\BaseCheckControlSettingUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseCheckControlSettingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ConditionInputTypeSetting\BaseSettingUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseSettingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ConditionInputTypeSetting\CheckBoxSettingUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CheckBoxSettingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ConditionInputTypeSetting\ComboBoxSettingUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ComboBoxSettingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ConditionInputTypeSetting\DateTimePickerSettingUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DateTimePickerSettingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ConditionInputTypeSetting\RadioButtonSettingUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RadioButtonSettingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ConditionInputTypeSetting\TextBoxSettingUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextBoxSettingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ControlWidthSetter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlWidthSetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\FilterForm.resx">
+      <DependentUpon>FilterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FpSpreadForHeaderSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FpSpreadForHeaderSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ComboBoxActionAfterEnterKeyDown.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ComboBoxActionAfterEnterKeyDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ComboBoxValid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ComboBoxValid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\BaseInfoSetting\ToolStripButtonLock.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\BaseInfoSetting\ToolStripButtonUnLock.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonUnLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonBorderBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderLeft.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonBorderLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonDeleteOne.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonDeleteOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonDown.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonExport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonImport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonNewOne.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonNewOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonNull.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\ToolStripButtonUp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripButtonHAlignmentBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonHAlignmentBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripButtonHAlignmentCenter.resx">
+      <DependentUpon>ToolStripButtonHAlignmentCenter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripButtonHAlignmentLeft.resx">
+      <DependentUpon>ToolStripButtonHAlignmentLeft.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\HAlignment\ToolStripButtonHAlignmentRight.resx">
+      <DependentUpon>ToolStripButtonHAlignmentRight.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonColor.resx">
+      <DependentUpon>ToolStripButtonColor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonColumnTotalSum.resx">
+      <DependentUpon>ToolStripButtonColumnTotalSum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonFilter.resx">
+      <DependentUpon>ToolStripButtonFilter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonFont.resx">
+      <DependentUpon>ToolStripButtonFont.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonMerge.resx">
+      <DependentUpon>ToolStripButtonMerge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonRowTotalSum.resx">
+      <DependentUpon>ToolStripButtonRowTotalSum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripButtonSort.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonSort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripSplitButtonDecimalPlace.resx">
+      <DependentUpon>ToolStripSplitButtonDecimalPlace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\ToolStripSplitButtonValueTranslateType.resx">
+      <DependentUpon>ToolStripSplitButtonValueTranslateType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonBevelLineDown.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonBevelLineDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderAll.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonBorderAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderAround.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonBorderAround.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderBottom.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonBorderBottom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderRight.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonBorderRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderTop.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonBorderTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\Border\ToolStripButtonBorderEraser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonBorderEraser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonBevelLineUp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonBevelLineUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonColor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonFont.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonFont.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripButtonHAlignmentCenter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonHAlignmentCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripButtonHAlignmentLeft.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonHAlignmentLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\HAlignment\ToolStripButtonHAlignmentRight.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonHAlignmentRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripButtonSpan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonSpan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableColumnWidth.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripLableColumnWidth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableRowHeight.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripLableRowHeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxColumnWidth.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripTextBoxColumnWidth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxRowHeight.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripTextBoxRowHeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripButtonVAlignmentBottom.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonVAlignmentBottom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripButtonVAlignmentCenter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonVAlignmentCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\VAlignment\ToolStripButtonVAlignmentTop.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonVAlignmentTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableBottomRowCount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripLableBottomRowCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableColumnCount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripLableColumnCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableSpace.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripLableSpace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripLableTopRowCount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripLableTopRowCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxBottomRowCount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripTextBoxBottomRowCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxColumnCount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripTextBoxColumnCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\HeaderSetting\ToolStripTextBoxTopRowCount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripTextBoxTopRowCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripButtonVAlignmentBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonVAlignmentBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripButtonVAlignmentBottom.resx">
+      <DependentUpon>ToolStripButtonVAlignmentBottom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripButtonVAlignmentCenter.resx">
+      <DependentUpon>ToolStripButtonVAlignmentCenter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ReportColumnPropertyEditor\VAlignment\ToolStripButtonVAlignmentTop.resx">
+      <DependentUpon>ToolStripButtonVAlignmentTop.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ToolStripSplitButtonPlus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripSplitButtonPlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\IToolStripMenuProvider\UserControlOfReportTree\ToolStripButtonRefresh.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonRefresh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ToolStripButtonPlus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripButtonPlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ToolStripTextBoxPlus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripTextBoxPlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PublicInterfaceSetting\IDatasAskerSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IDatasAskerSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PublicInterfaceSetting\ISystemValueSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ISystemValueSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportSetting\ConditionDetailSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConditionDetailSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportSetting\ConditionSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConditionSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportSetting\DetailReportSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailReportSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportSetting\HeaderSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HeaderSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportSetting\InterfaceSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InterfaceSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportSetting\ReportSettingTabPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportSettingTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportSetting\TreeSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TreeSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportTabPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SheetViewForHeaderSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SheetViewForHeaderSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UserControlOfReportTree.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControlOfReportTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Wizard\BaseWizardUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseWizardUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Wizard\ReportBaseInfoWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportBaseInfoWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Wizard\ReportLayoutStyleWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportLayoutStyleWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\SelectorForm.resx">
+      <DependentUpon>SelectorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GlobalValue\BaseTextBoxForGlobalValue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseTextBoxForGlobalValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GlobalValue\ToolStripSplitButtonForGlobalValue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripSplitButtonForGlobalValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ComboBoxPlus.resx">
+      <DependentUpon>ComboBoxPlus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\FpSpreadPlus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FpSpreadPlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\TextBoxPlus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextBoxPlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\ToolStripComboBoxPlus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolStripComboBoxPlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Plus\TreeViewPlus.resx">
+      <DependentUpon>TreeViewPlus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportSetting\BaseInfoSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseInfoSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportSetting\ReportSettingPlatForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportSettingPlatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Wizard\ReportLayoutStyleWizardElement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportLayoutStyleWizardElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Wizard\ReportStyleWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportStyleWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Wizard\ReportStyleWizardElement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportStyleWizardElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportSetting\ReportStyleSetting\CustomColumnCrossStyleSettingUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomColumnCrossStyleSettingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportSetting\ReportStyleSetting\GeneralCrossStyleSettingUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GeneralCrossStyleSettingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportSetting\ReportStyleSetting\GridStyleSettingUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GridStyleSettingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportTabControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportTree.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBoxWithSelector.resx">
+      <DependentUpon>TextBoxWithSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Wizard\WizardOfWizard\ReportStyle\CustomColumnCrossStyle\CustomColumnCrossStyleWizardUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomColumnCrossStyleWizardUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Wizard\WizardOfWizard\ReportStyle\CrossStyleWizardUserControl.resx">
+      <DependentUpon>CrossStyleWizardUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormWithArrow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormWithArrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuickReportEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuickReportEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportSetting\ConditionCreator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConditionCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportSetting\ReportColumnPropertyEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportColumnPropertyEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportSetting\TreeNodeIconSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TreeNodeIconSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Wizard\BaseWizard.resx">
+      <DependentUpon>BaseWizard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Wizard\CreateReportWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CreateReportWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Wizard\ReportStyle\CustomColumnCrossStyleWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomColumnCrossStyleWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Wizard\ReportStyle\GeneralCrossStyleWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GeneralCrossStyleWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuickReportEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuickReportEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuickReportShow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuickReportShow.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Department.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Query.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuickReportEditor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuickReport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Column.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Condition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DateTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Donamic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridStylePreview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GeneralCrossStylePreview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomColumnCrossStylePreview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CrossStyleWizardValue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CrossStyleWizardColumn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CrossStyleWizardRow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CrossStyleWizardRowText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LayoutStylePreview_ConditionTop_TreeBottomLeft_MainBottomRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LayoutStylePreview_ConditionTop_MainBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LayoutPreview_ConditionTop_TreeBottomLeft_MainBottomRightTop_DetailBottomRightBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LayoutStylePreview_Main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LayoutStylePreview_TreeLeft_ConditionRightTop_MainRightBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LayoutStylePreview_TreeLeft_MainRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LayoutStylePreview_TreeLeft_ConditionRightTop_MainRightBottomTop_DetaiRightBottomBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LayoutStylePreview_TreeLeft_MainRightTop_DetailRightBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LayoutStylePreview_MainTop_DetailBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Span.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BevelLineDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BorderBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BorderLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BorderRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BorderTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BorderAround.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BorderAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HAlignmentCenter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HAlignmentLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HAlignmentRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VAlignmentBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VAlignmentCenter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VAlignmentTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BevelLineUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Merge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValueTranslateType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DecimalPlace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnTotalSum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RowTotalSum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteOne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewOne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Null.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\ReportLayoutStyleShow\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="New" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Department" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Department.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Export" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Export.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Import" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Import.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lock.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Preview.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Print.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Query" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Query.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickReport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuickReportEditor.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reload.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Setting.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Share" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Share.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SQL_CreateTableQUICKREPORT_REPORTS" xml:space="preserve">
+    <value>-- Create table
+create table QUICKREPORT_REPORTS
+(
+  ID      VARCHAR2(38) not null,
+  NAME    VARCHAR2(200) not null,
+  TYPE    VARCHAR2(100) not null,
+  VERSION NUMBER(8,2) not null,
+  CONTENT BLOB,
+  ISVALID VARCHAR2(1) default 1 not null
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns 
+comment on column QUICKREPORT_REPORTS.ID
+  is '编码';
+comment on column QUICKREPORT_REPORTS.NAME
+  is '名称';
+comment on column QUICKREPORT_REPORTS.TYPE
+  is '类别';
+comment on column QUICKREPORT_REPORTS.VERSION
+  is '版本号';
+comment on column QUICKREPORT_REPORTS.CONTENT
+  is '内容';
+comment on column QUICKREPORT_REPORTS.ISVALID
+  is '是否有效';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table QUICKREPORT_REPORTS
+  add constraint PK_QUICKREPORT_REPORTS primary key (ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );</value>
+    <comment>创建表结构QUICKREPORT_REPORTS。</comment>
+  </data>
+  <data name="SQL_CreateTableQUICKREPORT_SETTINGS" xml:space="preserve">
+    <value>-- Create table
+create table QUICKREPORT_SETTINGS
+(
+  OPER_CODE VARCHAR2(12) not null,
+  REPORT_ID VARCHAR2(38) not null,
+  CONTENT   BLOB,
+  SHARED    NVARCHAR2(1) default 0 not null
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns 
+comment on column QUICKREPORT_SETTINGS.OPER_CODE
+  is '员工编码';
+comment on column QUICKREPORT_SETTINGS.REPORT_ID
+  is '报表ID';
+comment on column QUICKREPORT_SETTINGS.CONTENT
+  is '内容';
+comment on column QUICKREPORT_SETTINGS.SHARED
+  is '是否共享';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table QUICKREPORT_SETTINGS
+  add constraint PK_QUICKREPORT_SETTINGS primary key (OPER_CODE, REPORT_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );</value>
+    <comment>创建表结构QUICKREPORT_SETTINGS。</comment>
+  </data>
+  <data name="SQL_DeleteQuickReportByID" xml:space="preserve">
+    <value>delete from quickreport_reports where quickreport_reports.id = '{0}'</value>
+    <comment>根据报表ID删除报表。</comment>
+  </data>
+  <data name="SQL_InsertQuickReportBaseInfo" xml:space="preserve">
+    <value>INSERT INTO quickreport_reports
+  (quickreport_reports.id,
+   quickreport_reports.name,
+   quickreport_reports.type,
+   quickreport_reports.version,
+   quickreport_reports.isvalid)
+VALUES
+  ('{0}', '{1}', '{2}', '{3}', '{4}')</value>
+    <comment>插入报表的基本信息。</comment>
+  </data>
+  <data name="SQL_InsertSettingBaseInfo" xml:space="preserve">
+    <value>INSERT INTO quickreport_settings
+  (quickreport_settings.oper_code, quickreport_settings.report_id)
+VALUES
+  ('{0}', '{1}')</value>
+    <comment>插入设置的基本信息。</comment>
+  </data>
+  <data name="SQL_QueryAllReports" xml:space="preserve">
+    <value>select quickreport_reports.id,
+       quickreport_reports.name,
+       quickreport_reports.type,
+       quickreport_reports.version,
+       quickreport_reports.isvalid
+  from quickreport_reports
+ order by quickreport_reports.type , quickreport_reports.id</value>
+    <comment>获得所有报表的信息（不包含报表内容）。</comment>
+  </data>
+  <data name="SQL_QueryAllReportTypes" xml:space="preserve">
+    <value>select distinct quickreport_reports.type
+  from quickreport_reports
+ order by quickreport_reports.type</value>
+    <comment>查询当前所有报表类型。</comment>
+  </data>
+  <data name="SQL_QueryReportByID" xml:space="preserve">
+    <value>select quickreport_reports.id,
+       quickreport_reports.name,
+       quickreport_reports.type,
+       quickreport_reports.version,
+       quickreport_reports.content,
+       quickreport_reports.isvalid
+  from quickreport_reports
+ where quickreport_reports.id='{0}'</value>
+    <comment>通过报表ID获得完整的报表信息。</comment>
+  </data>
+  <data name="SQL_QuerySettingByOperCodeAndReportID" xml:space="preserve">
+    <value>select quickreport_settings.content
+  from quickreport_settings
+ where quickreport_settings.oper_code = '{0}'
+   and quickreport_settings.report_id = '{1}'</value>
+    <comment>根据操作员编码与报表ID查询设置。</comment>
+  </data>
+  <data name="SQL_QuerySettingExist" xml:space="preserve">
+    <value>select *
+  from quickreport_settings
+ where quickreport_settings.oper_code = '{0}'
+   and quickreport_settings.report_id = '{1}'</value>
+    <comment>查询是否存在设置。</comment>
+  </data>
+  <data name="SQL_QuerySharedSettingByReportID" xml:space="preserve">
+    <value>select quickreport_settings.content
+  from quickreport_settings
+ where quickreport_settings.report_id = '{0}'
+   and quickreport_settings.shared='1'</value>
+    <comment>根据报表ID查询共享的设置。</comment>
+  </data>
+  <data name="SQL_QuerySharedSettingExistByOperCodeAndReportID" xml:space="preserve">
+    <value>select com_employee.empl_name
+  from quickreport_settings,com_employee
+ where 
+       quickreport_settings.oper_code=com_employee.empl_code(+)
+   and quickreport_settings.oper_code = '{0}'
+   and quickreport_settings.report_id = '{1}' 
+   and quickreport_settings.shared='1'</value>
+    <comment>查询是否存在共享设置。</comment>
+  </data>
+  <data name="SQL_QuerySharedSettingExistByReportID" xml:space="preserve">
+    <value>select com_employee.empl_name
+  from quickreport_settings,com_employee
+ where 
+       quickreport_settings.oper_code=com_employee.empl_code(+)
+   and quickreport_settings.report_id = '{0}' 
+   and quickreport_settings.shared='1'</value>
+    <comment>根据报表ID查询该报表的共享设置。</comment>
+  </data>
+  <data name="SQL_QueryTableExistQUICKREPORT_REPORTS" xml:space="preserve">
+    <value>select table_name
+  from user_all_tables
+ where table_name = 'QUICKREPORT_REPORTS'</value>
+    <comment>查询是否存在表结构QUICKREPORT_REPORTS。</comment>
+  </data>
+  <data name="SQL_QueryTableExistQUICKREPORT_SETTINGS" xml:space="preserve">
+    <value>select table_name
+  from user_all_tables
+ where table_name = 'QUICKREPORT_SETTINGS'</value>
+    <comment>查询是否存在表结构QUICKREPORT_SETTINGS。</comment>
+  </data>
+  <data name="SQL_UpdateQuickReport" xml:space="preserve">
+    <value>update quickreport_reports
+   set quickreport_reports.id      = '{0}',
+       quickreport_reports.name    = '{1}',
+       quickreport_reports.type    = '{2}',
+       quickreport_reports.version ='{3}',
+       quickreport_reports.content = :c,
+       quickreport_reports.isvalid = '{4}'
+ where quickreport_reports.id = '{0}'</value>
+    <comment>更新报表全部信息。</comment>
+  </data>
+  <data name="SQL_UpdateQuickReportContentByID" xml:space="preserve">
+    <value>update quickreport_reports
+   set quickreport_reports.content = :c
+ where quickreport_reports.id = '{0}'</value>
+    <comment>根据报表ID更新报表内容。</comment>
+  </data>
+  <data name="SQL_UpdateSettingByOperCodeAndReportID" xml:space="preserve">
+    <value>update quickreport_settings
+   set quickreport_settings.content = :c
+ where quickreport_settings.oper_code = '{0}'
+   and quickreport_settings.report_id = '{1}'</value>
+    <comment>根据操作员编码与报表ID更新设置。</comment>
+  </data>
+  <data name="SQL_UpdateSharedSettingFlagByOperCodeAndReportID" xml:space="preserve">
+    <value>update quickreport_settings
+   set quickreport_settings.shared = '{2}'
+ where quickreport_settings.oper_code = '{0}'
+   and quickreport_settings.report_id = '{1}'</value>
+    <comment>根据操作员编码与报表ID更新设置的共享状态。</comment>
+  </data>
+  <data name="Document" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Document.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveAll.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Column" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Column.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Condition" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Condition.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Date" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Date.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DateTime" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DateTime.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Donamic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Donamic.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Person" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Person.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Unlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Unlock.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CrossStyleWizardColumn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CrossStyleWizardColumn.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CrossStyleWizardRow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CrossStyleWizardRow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CrossStyleWizardRowText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CrossStyleWizardRowText.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CrossStyleWizardValue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CrossStyleWizardValue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CustomColumnCrossStylePreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CustomColumnCrossStylePreview.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GeneralCrossStylePreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GeneralCrossStylePreview.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GridStylePreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GridStylePreview.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LayoutStylePreview_ConditionTop_MainBottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LayoutStylePreview_ConditionTop_MainBottom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LayoutStylePreview_ConditionTop_TreeBottomLeft_MainBottomRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LayoutStylePreview_ConditionTop_TreeBottomLeft_MainBottomRight.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LayoutPreview_ConditionTop_TreeBottomLeft_MainBottomRightTop_DetailBottomRightBottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LayoutPreview_ConditionTop_TreeBottomLeft_MainBottomRightTop_DetailBottomRightBottom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LayoutStylePreview_Main" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LayoutStylePreview_Main.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LayoutStylePreview_TreeLeft_ConditionRightTop_MainRightBottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LayoutStylePreview_TreeLeft_ConditionRightTop_MainRightBottom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LayoutStylePreview_TreeLeft_MainRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LayoutStylePreview_TreeLeft_MainRight.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LayoutStylePreview_MainTop_DetailBottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LayoutStylePreview_MainTop_DetailBottom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LayoutStylePreview_TreeLeft_ConditionRightTop_MainRightBottomTop_DetaiRightBottomBottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LayoutStylePreview_TreeLeft_ConditionRightTop_MainRightBottomTop_DetaiRightBottomBottom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LayoutStylePreview_TreeLeft_MainRightTop_DetailRightBottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LayoutStylePreview_TreeLeft_MainRightTop_DetailRightBottom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Span" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Span.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BevelLineDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BevelLineDown.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Clear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Clear.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Font" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Font.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BorderBottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BorderBottom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BorderLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BorderLeft.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BorderRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BorderRight.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BorderTop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BorderTop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Color.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BorderAround" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BorderAround.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BorderAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BorderAll.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HAlignmentCenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HAlignmentCenter.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HAlignmentLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HAlignmentLeft.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HAlignmentRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HAlignmentRight.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VAlignmentBottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VAlignmentBottom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VAlignmentCenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VAlignmentCenter.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VAlignmentTop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VAlignmentTop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eraser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eraser.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BevelLineUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BevelLineUp.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Filter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Filter.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Merge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Merge.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sort" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sort.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ValueTranslateType" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ValueTranslateType.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DecimalPlace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DecimalPlace.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ColumnTotalSum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ColumnTotalSum.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RowTotalSum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RowTotalSum.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeleteOne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeleteOne.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Down.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewOne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewOne.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Up.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Null" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Null.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

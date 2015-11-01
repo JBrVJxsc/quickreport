@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickReportLib", "QuickReportLib.csproj", "{94C7F162-013E-44A2-8E41-B1E07465BAFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickReport", "..\QuickReport\QuickReport.csproj", "{5E4AA180-56A8-47F2-A0C1-FE76A584FF38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickReportCore", "..\QuickReportCore\QuickReportCore.csproj", "{2122CD68-9B42-4492-B5C7-216B1574EAB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94C7F162-013E-44A2-8E41-B1E07465BAFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C7F162-013E-44A2-8E41-B1E07465BAFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94C7F162-013E-44A2-8E41-B1E07465BAFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94C7F162-013E-44A2-8E41-B1E07465BAFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E4AA180-56A8-47F2-A0C1-FE76A584FF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E4AA180-56A8-47F2-A0C1-FE76A584FF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E4AA180-56A8-47F2-A0C1-FE76A584FF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E4AA180-56A8-47F2-A0C1-FE76A584FF38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2122CD68-9B42-4492-B5C7-216B1574EAB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2122CD68-9B42-4492-B5C7-216B1574EAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2122CD68-9B42-4492-B5C7-216B1574EAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2122CD68-9B42-4492-B5C7-216B1574EAB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
